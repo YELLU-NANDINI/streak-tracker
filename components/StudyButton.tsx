@@ -2,29 +2,32 @@
 
 export default function StudyButton() {
 
-  async function markStudy() {
+  function markStudy() {
 
-    const res = await fetch("/api/study", {
-      method: "POST"
-    });
+    const today = new Date().toISOString().split("T")[0];
 
-    const data = await res.json();
+    let studyDates = JSON.parse(localStorage.getItem("studyDates") || "[]");
 
-    alert(data.message);
+    if (studyDates.includes(today)) {
+      alert("You have already marked today.");
+      return;
+    }
+
+    studyDates.push(today);
+
+    localStorage.setItem("studyDates", JSON.stringify(studyDates));
+
+    alert("Study marked for today!");
 
     window.location.reload();
-
   }
 
   return (
-
     <button
       onClick={markStudy}
-      className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-xl text-lg font-semibold shadow-lg transition transform hover:scale-105"
+      className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-xl text-lg font-semibold shadow-lg text-white"
     >
       I Studied Today 🔥
     </button>
-
   );
-
 }
