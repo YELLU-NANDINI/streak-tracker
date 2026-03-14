@@ -25,7 +25,7 @@ export default function StudyButton() {
   return (
     <button
       onClick={markStudy}
-      className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-xl text-lg font-semibold shadow-lg text-white"
+      className="bg-purple-600 hover:bg-yellow-700 px-8 py-3 rounded-xl text-lg font-semibold shadow-lg text-white"
     >
       I Studied Today 🔥
     </button>

@@ -17,7 +17,7 @@ export default function HistoryPage() {
 
         <Link
           href="/"
-          className="block mt-6 text-center bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700"
+          className="block mt-6 text-center bg-purple-600 text-white py-2 rounded-lg hover:bg-blue-700"
         >
           ← Back to Dashboard
         </Link>
