@@ -45,21 +45,25 @@ export default function StreakCard() {
 
   return (
 
-    <div className="bg-white/20 backdrop-blur-lg border border-white/30 p-8 rounded-2xl shadow-2xl space-y-4 text-center max-w-xl mx-auto">
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
 
-      <p className="text-2xl font-bold text-white">
-🔥 Current Streak: {streak} days
-</p>
+  <div className="bg-gradient-to-r from-green-400 to-green-600 text-white p-6 rounded-2xl shadow-xl text-center">
+    <h2 className="text-lg font-semibold">🔥 Current Streak</h2>
+    <p className="text-3xl font-bold mt-2">{streak} days</p>
+  </div>
 
-<p className="text-lg text-white/90">
-📚 Total Study Days: {total}
-</p>
+  
+  <div className="bg-gradient-to-r from-green-400 to-green-600 text-white p-6 rounded-2xl shadow-xl text-center">
+    <h2 className="text-lg font-semibold">📚 Total Study Days</h2>
+    <p className="text-3xl font-bold mt-2">{total}</p>
+  </div>
 
-<p className="text-lg text-white/90">
-📅 Last Studied: {last || "None"}
-</p>
+ 
+  <div className="bg-gradient-to-r from-green-400 to-emerald-600 text-white p-6 rounded-2xl shadow-xl text-center">
+    <h2 className="text-lg font-semibold">📅 Last Studied</h2>
+    <p className="text-2xl font-bold mt-2">{last}</p>
+  </div>
 
-    </div>
-
+</div>
   );
 }
