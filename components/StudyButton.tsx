@@ -15,6 +15,9 @@ export default function StudyButton() {
 
     studyDates.push(today);
 
+    // sort dates
+    studyDates.sort();
+
     localStorage.setItem("studyDates", JSON.stringify(studyDates));
 
     alert("Study marked for today!");
